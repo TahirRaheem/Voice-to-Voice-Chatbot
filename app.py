@@ -13,7 +13,7 @@ os.environ['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'] = 'your_a
 model = whisper.load_model("base")
 
 # Initialize Groq API client
-client = Groq(api_key=os.environ.get("GROQ_API_KEY"))
+client = Groq(api_key=os.environ.get("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"))
 
 # Function to transcribe audio using Whisper
 def transcribe_audio(audio_file):
