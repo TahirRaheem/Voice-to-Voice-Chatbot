@@ -1,9 +1,9 @@
-# Import required libraries
 import os
 import whisper
 from groq import Groq
 from gtts import gTTS
 import streamlit as st
+from st_audiorec import st_audiorec
 import tempfile
 
 # Set your Groq API key here
@@ -40,17 +40,17 @@ def text_to_speech(text):
 st.title("Real-time Voice-to-Voice Chatbot")
 st.write("This chatbot transcribes your speech, processes it with an LLM, and returns the response as both text and speech.")
 
-# Upload audio file
-audio_file = st.file_uploader("Upload audio file", type=["wav", "mp3"])
+# Audio recording section
+st.subheader("Record Your Audio")
+audio_data = st_audiorec.record_file("audio_recording.wav")
 
-if audio_file is not None:
+if audio_data is not None:
     # Save uploaded audio file to a temporary location
-    with tempfile.NamedTemporaryFile(delete=False) as tmp:
-        tmp.write(audio_file.read())
-        tmp_audio_path = tmp.name
+    with open("audio_recording.wav", "wb") as f:
+        f.write(audio_data)
 
     # Step 1: Transcribe audio to text
-    transcribed_text = transcribe_audio(tmp_audio_path)
+    transcribed_text = transcribe_audio("audio_recording.wav")
     st.write("Transcribed Text:", transcribed_text)
 
     # Step 2: Get LLM response from Groq API
