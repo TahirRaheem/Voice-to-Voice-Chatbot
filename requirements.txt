@@ -1,6 +1,6 @@
-openai-whisper==1.0.0  # Specify an actual stable version
-groq==1.0.0            # Replace with the latest version or a stable version
-gtts==2.2.3
-streamlit==1.12.0
-python-multipart==0.0.6
-streamlit-audio-recorder==0.1.0  # Specify the latest version
+openai-whisper
+groq
+gtts
+streamlit
+streamlit-audio-recorder
+python-multipart
