@@ -2,5 +2,5 @@ openai-whisper
 groq
 gtts
 streamlit
-streamlit-audio-recorder
+git+https://github.com/misbah4064/streamlit-audio-recorder.git
 python-multipart
