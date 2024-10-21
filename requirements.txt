@@ -3,3 +3,4 @@ groq
 gtts
 streamlit
 python-multipart
+streamlit-audio-recorder
