@@ -1,0 +1,5 @@
+openai-whisper
+groq
+gtts
+streamlit
+python-multipart
