@@ -1,6 +1,3 @@
-# Install necessary libraries
-!pip install openai-whisper groq gtts streamlit python-multipart
-
 # Import required libraries
 import os
 import whisper
